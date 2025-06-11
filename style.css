@@ -399,6 +399,7 @@ section {
 }
 .about {
     background: var(--light-gray);
+    margin-top: 70px;
 }
 
 .about-content {
@@ -713,6 +714,47 @@ section {
     .gallery-item img {
         height: 200px;
     }
+}
+
+/* --- Responsive Design pour mobile (iPhone 11 Pro ~414px de large) --- */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero-image, .about-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .activities-grid, .gallery-grid, .achievements-grid, .footer-content {
+    grid-template-columns: 1fr !important;
+    flex-direction: column;
+  }
+  .about-content, .contact-content {
+    flex-direction: column;
+  }
+  .footer-section {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
